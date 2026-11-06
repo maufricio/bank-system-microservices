@@ -16,5 +16,5 @@ public interface AccountsRepository extends JpaRepository<Accounts, Long> {
     // We put the annotations below to make sure that the database is updated when we delete an account
     @Transactional
     @Modifying
-    boolean deleteByCustomerId(Long customerId);
+    long deleteByCustomerId(Long customerId);
 }

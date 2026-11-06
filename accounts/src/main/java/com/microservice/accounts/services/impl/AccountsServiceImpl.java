@@ -106,8 +106,8 @@ public class AccountsServiceImpl implements IAccountsService {
                 () -> new ResourceNotFoundException("Customer", "mobileNumber", mobileNumber)
         );
 
-        boolean isAccDeleted = this.accountsRepository.deleteByCustomerId(customer.getCustomerId());
-        if(!isAccDeleted)
+        long deletedCount = this.accountsRepository.deleteByCustomerId(customer.getCustomerId());
+        if(deletedCount <= 0)
             return false;
 
         this.customersRepository.deleteById(customer.getCustomerId());
