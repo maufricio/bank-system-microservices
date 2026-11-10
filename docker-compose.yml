@@ -1,0 +1,31 @@
+services:
+  accounts:
+    image: "therealcodeshow/accounts:s4"
+    container_name: accounts-ms
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+  loans:
+    image: "therealcodeshow/loans:s4"
+    container_name: loans-ms
+    restart: unless-stopped
+    ports:
+      - "8090:8090"
+    deploy:
+      resources:
+        limits:
+          memory: 700m # establishes the memory limit for the container which is 700MB
+  cards:
+    image: "therealcodeshow/cards:s4"
+    container_name: cards-ms
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
