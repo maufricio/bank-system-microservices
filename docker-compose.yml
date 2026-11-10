@@ -9,6 +9,8 @@ services:
       resources:
         limits:
           memory: 700m
+    networks:
+      - therealcodeshowbank
   loans:
     image: "therealcodeshow/loans:s4"
     container_name: loans-ms
@@ -19,6 +21,8 @@ services:
       resources:
         limits:
           memory: 700m # establishes the memory limit for the container which is 700MB
+    networks:
+      - therealcodeshowbank
   cards:
     image: "therealcodeshow/cards:s4"
     container_name: cards-ms
@@ -29,3 +33,9 @@ services:
       resources:
         limits:
           memory: 700m
+    networks:
+      - therealcodeshowbank
+
+networks:
+  therealcodeshowbank:
+    driver: bridge # this driver means that the network will be created in the host machine
