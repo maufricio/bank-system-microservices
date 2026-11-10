@@ -1,3 +1,4 @@
+name: therealcodeshowbank
 services:
   accounts:
     image: "therealcodeshow/accounts:s4"
