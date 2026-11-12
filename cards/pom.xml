@@ -103,7 +103,7 @@
                 <version>3.5.2</version>
                 <configuration>
                     <to>
-                        <image>therealcodeshow/${project.artifactId}:s4</image>
+                        <image>therealcodeshow/${project.artifactId}:s6</image>
                     </to>
                 </configuration>
             </plugin>
