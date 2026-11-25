@@ -7,8 +7,8 @@ spring:
     config:
       server:
         native:
-          search-locations: classpath:/config
-
+          #search-locations: classpath:/config
+          search-locations: "file:C:/Users/mauri/Documents/Microservices_Course\ -\ Udemy/config"
 server:
   port: 8071
 
